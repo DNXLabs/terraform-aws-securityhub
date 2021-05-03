@@ -14,11 +14,7 @@ resource "aws_cloudwatch_event_rule" "securityhub" {
   "detail": {
     "findings": {
       "Severity": {
-        "Label": [
-          "MEDIUM",
-          "HIGH",
-          "CRITICAL"
-        ]
+        "Label": ${jsonencode(var.severity_list)}
       },
       "Workflow": {
         "Status": [

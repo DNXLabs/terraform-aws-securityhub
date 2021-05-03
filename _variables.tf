@@ -16,6 +16,11 @@ variable "subscription_foundational" {
   description = "Enables AWS Foundational Security Best Practices subscription"
 }
 
+variable "severity_list" {
+  type = list
+  default = ["HIGH","CRITICAL"]
+}
+
 variable "members" {
   type       = list
   default     = []
