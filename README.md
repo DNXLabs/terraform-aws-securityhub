@@ -32,6 +32,7 @@ No requirements.
 | alarm\_slack\_endpoint | Enables slack notification to endpoint passed (optional) | `string` | `""` | no |
 | invite | Invite member accounts? (Use 'false' when this account is the delegated admin by master account) | `bool` | `true` | no |
 | members | List of member AWS accounts as [{account\_id: '9999', email: 'a@b.com'}, {...}] } | `list` | `[]` | no |
+| severity\_list | n/a | `list` | <pre>[<br>  "HIGH",<br>  "CRITICAL"<br>]</pre> | no |
 | subscription\_cis | Enables CIS Foundations Benchmark Standards subscription | `bool` | `false` | no |
 | subscription\_foundational | Enables AWS Foundational Security Best Practices subscription | `bool` | `false` | no |
 | subscription\_pci | Enables PCI-DSS Standards subscription | `bool` | `false` | no |
