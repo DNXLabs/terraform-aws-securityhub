@@ -17,12 +17,12 @@ variable "subscription_foundational" {
 }
 
 variable "severity_list" {
-  type = list
-  default = ["HIGH","CRITICAL"]
+  type    = list(any)
+  default = ["HIGH", "CRITICAL"]
 }
 
 variable "members" {
-  type       = list
+  type        = list(any)
   default     = []
   description = "List of member AWS accounts as [{account_id: '9999', email: 'a@b.com'}, {...}] }"
 }

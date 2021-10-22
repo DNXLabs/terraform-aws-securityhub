@@ -1,16 +1,16 @@
 resource "aws_cloudwatch_event_target" "sns" {
-  count          = var.alarm_email != "" ? 1 : 0
-  rule           = aws_cloudwatch_event_rule.securityhub[0].name
-  target_id      = "securityhub-to-sns"
-  arn            = aws_sns_topic.securityhub[0].arn
+  count     = var.alarm_email != "" ? 1 : 0
+  rule      = aws_cloudwatch_event_rule.securityhub[0].name
+  target_id = "securityhub-to-sns"
+  arn       = aws_sns_topic.securityhub[0].arn
   input_transformer {
     input_template = "\"SecurityHub <aws_account_id>/<aws_region> <severity> <title> <remediation_url>\""
     input_paths = {
-      "aws_account_id"    = "$.detail.findings[0].AwsAccountId"
-      "aws_region"        = "$.region"
-      "remediation_url"   = "$.detail.findings[0].ProductFields.RecommendationUrl"
-      "severity"          = "$.detail.findings[0].Severity.Label"
-      "title"             = "$.detail.findings[0].Title"
+      "aws_account_id"  = "$.detail.findings[0].AwsAccountId"
+      "aws_region"      = "$.region"
+      "remediation_url" = "$.detail.findings[0].ProductFields.RecommendationUrl"
+      "severity"        = "$.detail.findings[0].Severity.Label"
+      "title"           = "$.detail.findings[0].Title"
     }
   }
 }
