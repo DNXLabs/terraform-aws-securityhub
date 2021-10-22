@@ -20,7 +20,7 @@ resource "aws_securityhub_standards_subscription" "foundational" {
 }
 
 resource "aws_securityhub_member" "members" {
-  for_each = {for member in var.members:  member.account_id => member}
+  for_each   = { for member in var.members : member.account_id => member }
   depends_on = [aws_securityhub_account.default]
   account_id = each.value.account_id
   email      = each.value.email
