@@ -4,7 +4,7 @@ resource "random_string" "to_slack_cf_suffix" {
   length  = 8
   special = false
   lower   = true
-  number  = false
+  numeric = false
 }
 
 resource "aws_cloudformation_stack" "to_slack" {
