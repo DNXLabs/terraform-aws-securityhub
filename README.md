@@ -18,13 +18,14 @@ The following resources will be created:
 | Name | Version |
 |------|---------|
 | terraform | >= 0.13.0 |
+| random | >= 3.3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | aws | n/a |
-| random | n/a |
+| random | >= 3.3.0 |
 
 ## Inputs
 
