@@ -8,7 +8,7 @@ resource "aws_cloudwatch_event_target" "sns" {
     input_paths = {
       "aws_account_id"  = "$.detail.findings[0].AwsAccountId"
       "aws_region"      = "$.region"
-      "remediation_url" = "$.detail.findings[0].ProductFields.RecommendationUrl"
+      "remediation_url" = "$.detail.findings[0].Remediation.Recommendation.Url"
       "severity"        = "$.detail.findings[0].Severity.Label"
       "title"           = "$.detail.findings[0].Title"
     }
