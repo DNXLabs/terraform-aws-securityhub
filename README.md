@@ -25,7 +25,6 @@ The following resources will be created:
 | Name | Version |
 |------|---------|
 | aws | n/a |
-| random | >= 3.3.0 |
 
 ## Inputs
 
@@ -33,6 +32,7 @@ The following resources will be created:
 |------|-------------|------|---------|:--------:|
 | alarm\_email | Enables email notification (optional) | `string` | `""` | no |
 | alarm\_slack\_endpoint | Enables slack notification to endpoint passed (optional) | `string` | `""` | no |
+| chatbot\_sns\_topic | SNS topic for chatbot notification | `string` | `""` | no |
 | invite | Invite member accounts? (Use 'false' when this account is the delegated admin by master account) | `bool` | `true` | no |
 | members | List of member AWS accounts as [{account\_id: '9999', email: 'a@b.com'}, {...}] } | `list(any)` | `[]` | no |
 | severity\_list | n/a | `list(any)` | <pre>[<br>  "HIGH",<br>  "CRITICAL"<br>]</pre> | no |
