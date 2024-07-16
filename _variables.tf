@@ -43,3 +43,9 @@ variable "alarm_slack_endpoint" {
   default     = ""
   description = "Enables slack notification to endpoint passed (optional)"
 }
+
+variable "chatbot_sns_topic" {
+  type        = string
+  default     = ""
+  description = "SNS topic for chatbot notification"
+}
