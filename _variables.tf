@@ -10,10 +10,29 @@ variable "subscription_cis" {
   description = "Enables CIS Foundations Benchmark Standards subscription"
 }
 
+variable "subscription_cis_version" {
+  type        = string
+  nullable    = false
+  default     = "3.0.0"
+  description = "The version of the CIS AWS Foundations Benchmark to subscribe to"
+}
+
 variable "subscription_foundational" {
   type        = bool
   default     = false
   description = "Enables AWS Foundational Security Best Practices subscription"
+}
+
+variable "subscription_resource_tagging" {
+  type        = bool
+  default     = false
+  description = "Enables AWS Resource Tagging Standard subscription"
+}
+
+variable "subscription_nist" {
+  type        = bool
+  default     = false
+  description = "Enables AWS NIST SP 800-53 subscription"
 }
 
 variable "severity_list" {

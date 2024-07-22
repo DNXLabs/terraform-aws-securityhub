@@ -37,8 +37,11 @@ The following resources will be created:
 | members | List of member AWS accounts as [{account\_id: '9999', email: 'a@b.com'}, {...}] } | `list(any)` | `[]` | no |
 | severity\_list | n/a | `list(any)` | <pre>[<br>  "HIGH",<br>  "CRITICAL"<br>]</pre> | no |
 | subscription\_cis | Enables CIS Foundations Benchmark Standards subscription | `bool` | `false` | no |
+| subscription\_cis\_version | The version of the CIS AWS Foundations Benchmark to subscribe to | `string` | `"3.0.0"` | no |
 | subscription\_foundational | Enables AWS Foundational Security Best Practices subscription | `bool` | `false` | no |
+| subscription\_nist | Enables AWS NIST SP 800-53 subscription | `bool` | `false` | no |
 | subscription\_pci | Enables PCI-DSS Standards subscription | `bool` | `false` | no |
+| subscription\_resource\_tagging | Enables AWS Resource Tagging Standard subscription | `bool` | `false` | no |
 
 ## Outputs
 
